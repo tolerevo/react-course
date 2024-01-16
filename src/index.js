@@ -1,21 +1,24 @@
-import { getByPlaceholderText } from '@testing-library/react';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Greeting() {
-  return <div>
-    <h1>Esto es un componente</h1>
-    <p>lorem 123</p>
-  </div>
+  function add(x, y) {
+    return x + y;
+  }
+
+  return (
+    <div>
+      <h1>{add(20, 40)}</h1>
+    </div>
+  );
 }
 
 root.render(
-  <div>
+  <>
     <Greeting />
     <Greeting />
     <Greeting />
-    <Greeting />
-  </div>
-)
+  </>
+);
