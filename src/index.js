@@ -4,31 +4,12 @@ import { Greeting, UserCard } from "./Greeting";
 import Product, { NavBar } from "./Product";
 import Button from "./Button";
 import { TaskCard } from "./Task";
+import { Post } from "./Post";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    <section>
-      <TaskCard ready={true} />
-      <br />
-      <Button text="Send" name="mss" />
-    </section>
-    <hr />
-    <section>
-      <TaskCard ready={false} />
-      <br />
-      <Button text="Receive" />
-      <input id="hola" on />
-    </section>
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        alert("enviado");
-      }}
-    >
-      <h1>Resgistro de usuario</h1>
-      <button>Send</button>
-    </form>
-  </>,
+    <Post />
+  </>
 );
