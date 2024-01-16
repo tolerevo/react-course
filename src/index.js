@@ -9,7 +9,17 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <>
-    <TaskCard ready={true} />
-    <TaskCard ready={false} />
+    <section>
+      <TaskCard ready={true} />
+      <br />
+      <Button text="Send" name="mss" />
+    </section>
+    <hr />
+    <section>
+      <TaskCard ready={false} />
+      <br />
+      <Button text="Receive" />
+      <input id="hola" on/>
+    </section>
   </>,
 );
