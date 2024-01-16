@@ -19,7 +19,11 @@ root.render(
       <TaskCard ready={false} />
       <br />
       <Button text="Receive" />
-      <input id="hola" on/>
+      <input id="hola" on />
     </section>
+    <form onSubmit={() => console.log("enviando datos del form")}>
+      <h1>Resgistro de usuario</h1>
+      <button>Send</button>
+    </form>
   </>,
 );
