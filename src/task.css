@@ -1,0 +1,17 @@
+.card {
+  background-color: aliceblue;
+  text-transform: uppercase;
+  border: 2px solid paleturquoise;
+  border-radius: 25px;
+  padding: 2rem;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.bg-true {
+  background-color: deeppink;
+}
+
+.bg-false {
+  background-color: deepskyblue;
+}
