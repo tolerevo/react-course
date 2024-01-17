@@ -2,9 +2,15 @@ import React from "react";
 
 export const Post = () => {
   return (
-    <ul>
-      <li>Titulo de una publicacion</li>
-      <li>Titulo de una publicacion 2</li>
-    </ul>
+    <button
+      onClick={() => {
+        fetch("https://jsonplaceholder.typicode.com/posts")
+          .then((response) => response.json())
+          .then((data) => console.log(data))
+          .catch((error) => console.error(error));
+      }}
+    >
+      Traer datos
+    </button>
   );
 };
