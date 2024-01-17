@@ -12,8 +12,27 @@ import { Post } from "./Post";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const user = [
+  {
+    id: 1,
+    name: "Ryan ray",
+    image: "https://robohash.org/user1",
+  },
+  {
+    id: 2,
+    name: "Ryan ray",
+    image: "https://robohash.org/user2",
+  },
+  {
+    id: 3,
+    name: "Ryan ray",
+    image: "https://robohash.org/user3",
+  },
+  ,
+];
+
 root.render(
   <>
-    <Post />
-  </>
+    
+  </>,
 );
