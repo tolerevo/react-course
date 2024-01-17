@@ -1,13 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 // eslint-disable-next-line
-import { Greeting, UserCard } from "./Greeting";
-// eslint-disable-next-line
-import Product, { NavBar } from "./Product";
-// eslint-disable-next-line
-import Button from "./Button";
-// eslint-disable-next-line
-import { TaskCard } from "./Task";
 import { Post } from "./Post";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -31,15 +24,16 @@ const users = [
   ,
 ];
 
-root.render(
-  <>
-    {users.map((user, index) => {
-      return (
-        <div key={index}>
-          <h1>{user.name}</h1>
-          <img src={user.image} />
-        </div>
-      );
-    })}
-  </>,
-);
+function Counter() {
+  const [mensaje, setMensaje] = useState("");
+
+  return (
+    <div>
+      <input onChange={(e) => setMensaje(e.target.value)} />
+      <button onClick={() => {
+        alert('El mensaje es:' + mensaje)
+      }}>Save</button>
+    </div>
+  );
+}
+root.render(<Counter />);
