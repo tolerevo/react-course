@@ -12,7 +12,7 @@ import { Post } from "./Post";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const user = [
+const users = [
   {
     id: 1,
     name: "Ryan ray",
@@ -20,12 +20,12 @@ const user = [
   },
   {
     id: 2,
-    name: "Ryan ray",
+    name: "Ryan Roberts",
     image: "https://robohash.org/user2",
   },
   {
     id: 3,
-    name: "Ryan ray",
+    name: "Ryan Gosling",
     image: "https://robohash.org/user3",
   },
   ,
@@ -33,6 +33,13 @@ const user = [
 
 root.render(
   <>
-    
+    {users.map((user, index) => {
+      return (
+        <div key={index}>
+          <h1>{user.name}</h1>
+          <img src={user.image} />
+        </div>
+      );
+    })}
   </>,
 );
